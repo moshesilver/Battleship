@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moshe\\source\\repos\\Battleship\\Battleship.csproj": {}
+    "C:\\Users\\moshe\\source\\repos\\PCS\\Battleship\\Battleship.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moshe\\source\\repos\\Battleship\\Battleship.csproj": {
+    "C:\\Users\\moshe\\source\\repos\\PCS\\Battleship\\Battleship.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moshe\\source\\repos\\Battleship\\Battleship.csproj",
+        "projectUniqueName": "C:\\Users\\moshe\\source\\repos\\PCS\\Battleship\\Battleship.csproj",
         "projectName": "Battleship",
-        "projectPath": "C:\\Users\\moshe\\source\\repos\\Battleship\\Battleship.csproj",
+        "projectPath": "C:\\Users\\moshe\\source\\repos\\PCS\\Battleship\\Battleship.csproj",
         "packagesPath": "C:\\Users\\moshe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moshe\\source\\repos\\Battleship\\obj\\",
+        "outputPath": "C:\\Users\\moshe\\source\\repos\\PCS\\Battleship\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
