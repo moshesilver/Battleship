@@ -134,6 +134,8 @@ namespace Battleship
             {
                 if (ship.Sunk && !ship.Announced)
                 {
+                    Console.Clear();
+                    playerBoard.PrintBoard();
                     Console.WriteLine($"Congratulations: You sunk my {ship.Name}!");
                     ship.Announced = true;
                     Thread.Sleep(2000);
