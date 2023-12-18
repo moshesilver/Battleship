@@ -12,3 +12,10 @@ C:\Users\moshe\source\repos\PCS\Battleship\obj\Debug\net7.0\refint\Battleship.dl
 C:\Users\moshe\source\repos\PCS\Battleship\obj\Debug\net7.0\Battleship.pdb
 C:\Users\moshe\source\repos\PCS\Battleship\obj\Debug\net7.0\Battleship.genruntimeconfig.cache
 C:\Users\moshe\source\repos\PCS\Battleship\obj\Debug\net7.0\ref\Battleship.dll
+C:\Users\moshe\source\repos\PCS\Battleship\bin\Debug\net7.0\CommonConsoleAppMethods.deps.json
+C:\Users\moshe\source\repos\PCS\Battleship\bin\Debug\net7.0\CommonConsoleAppMethods.runtimeconfig.json
+C:\Users\moshe\source\repos\PCS\Battleship\bin\Debug\net7.0\CommonConsoleAppMethods.exe
+C:\Users\moshe\source\repos\PCS\Battleship\bin\Debug\net7.0\CommonConsoleAppMethods.dll
+C:\Users\moshe\source\repos\PCS\Battleship\bin\Debug\net7.0\CommonConsoleAppMethods.pdb
+C:\Users\moshe\source\repos\PCS\Battleship\obj\Debug\net7.0\Battleship.csproj.AssemblyReference.cache
+C:\Users\moshe\source\repos\PCS\Battleship\obj\Debug\net7.0\Battleship.csproj.CopyComplete

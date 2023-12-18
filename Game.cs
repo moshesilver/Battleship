@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using CommonConsoleAppMethods;
 
 namespace Battleship
 {
@@ -17,7 +18,7 @@ namespace Battleship
         }
         public static void InitializeGlobals()
         {
-            playerBoard = new($"{GetPlayerName()}'s Board", IsFancyBoard());
+            playerBoard = new($"{Methods.GetName("Player name")}'s Board", Methods.YesNoInput("Fancy board"));
             computerBoard = new("Computer Board", playerBoard.Fancy);
             turnCount = 0;
             gameOver = false;
@@ -30,57 +31,17 @@ namespace Battleship
             new Ship("Submarine", 3);
             new Ship("Destroyer", 2);
         }
-        public static string GetPlayerName()
-        {
-            string? playerName;
-            do
-            {
-                Console.Write("Player name: ");
-                playerName = Console.ReadLine();
-                ClearCurrentConsoleLine();
-            } while (string.IsNullOrEmpty(playerName));
-            string[] firstLetters = playerName.Trim()
-                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            playerName = "";
-            for (int i = 0; i < firstLetters.Length; i++)
-            {
-                firstLetters[i] = firstLetters[i].Replace(firstLetters[i][0], char.ToUpper(firstLetters[i][0]));
-                playerName += firstLetters[i];
-                if (i != firstLetters.Length - 1)
-                {
-                    playerName += " ";
-                }
-            }
-            return playerName;
-        }
-        public static bool IsFancyBoard()
-        {
-            string? isFancyBoard;
-            do
-            {
-                Console.Write("Fancy board? (Y/N): ");
-                isFancyBoard = Console.ReadLine();
-                ClearCurrentConsoleLine();
-            } while (string.IsNullOrEmpty(isFancyBoard));
-            isFancyBoard = isFancyBoard.Trim().ToUpper();
-            if (isFancyBoard == "Y" || isFancyBoard == "YES")
-            {
-                return true;
-            }
-            return false;
-        }
         public static void GetPlayerGuess(out int ltr, out int num)
         {
             string? letter;
             string? numLetter;
             ltr = -1;
             num = -1;
-            Console.WriteLine();
             do
             {
-                ClearCurrentConsoleLine();
                 Console.Write("Choose a row (A - J): ");
                 letter = Console.ReadLine();
+                Methods.ClearCurrentConsoleLine();
                 if (!string.IsNullOrEmpty(letter))
                 {
                     letter = letter.Trim();
@@ -90,23 +51,14 @@ namespace Battleship
                     }
                 }
             } while (ltr < 0 || ltr > 9);
-            Console.WriteLine();
             do
             {
-                ClearCurrentConsoleLine();
                 Console.Write("Choose a column (1 - 10): ");
                 numLetter = Console.ReadLine();
+                Methods.ClearCurrentConsoleLine();
                 int.TryParse(numLetter, out num);
             } while (num < 1 || num > 10);
             num--;
-        }
-        public static void ClearCurrentConsoleLine()
-        {
-            Console.SetCursorPosition(0, Console.CursorTop - 1);
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write(new string(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
         }
         public static string ExecutePlayerGuess(int ltr, int num)
         {
@@ -187,15 +139,7 @@ namespace Battleship
         }
         public static void GetReplay()
         {
-            string? playAgain;
-            do
-            {
-                Console.WriteLine("Do you want to play again?: ");
-                playAgain = Console.ReadLine();
-                ClearCurrentConsoleLine();
-            } while (string.IsNullOrEmpty(playAgain));
-            playAgain = playAgain.Trim().ToUpper();
-            if (playAgain == "Y" || playAgain == "YES")
+            if (Methods.YesNoInput("Do you want to play again"))
             {
                 PlayAgain();
             }
