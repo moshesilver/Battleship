@@ -41,7 +41,7 @@ namespace Battleship
             {
                 Console.Write("Choose a row (A - J): ");
                 letter = Console.ReadLine();
-                Methods.ClearCurrentConsoleLine();
+                Methods.ClearConsoleLine();
                 if (!string.IsNullOrEmpty(letter))
                 {
                     letter = letter.Trim();
@@ -55,7 +55,7 @@ namespace Battleship
             {
                 Console.Write("Choose a column (1 - 10): ");
                 numLetter = Console.ReadLine();
-                Methods.ClearCurrentConsoleLine();
+                Methods.ClearConsoleLine();
                 int.TryParse(numLetter, out num);
             } while (num < 1 || num > 10);
             num--;
