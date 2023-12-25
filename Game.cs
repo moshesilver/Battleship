@@ -34,9 +34,7 @@ namespace Battleship
         public static void GetPlayerGuess(out int ltr, out int num)
         {
             string? letter;
-            string? numLetter;
             ltr = -1;
-            num = -1;
             do
             {
                 Console.Write("Choose a row (A - J): ");
@@ -51,14 +49,7 @@ namespace Battleship
                     }
                 }
             } while (ltr < 0 || ltr > 9);
-            do
-            {
-                Console.Write("Choose a column (1 - 10): ");
-                numLetter = Console.ReadLine();
-                Methods.ClearConsoleLine();
-                int.TryParse(numLetter, out num);
-            } while (num < 1 || num > 10);
-            num--;
+            num = Methods.GetNumber(1, 10, "Choose a column (1 - 10)") - 1;
         }
         public static string ExecutePlayerGuess(int ltr, int num)
         {
